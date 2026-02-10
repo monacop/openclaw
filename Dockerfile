@@ -46,4 +46,4 @@ ENV HOME=/tmp
 # For container platforms requiring external health checks:
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","openclaw.mjs","gateway","--allow-unconfigured","--bind","lan"]
-CMD ["bash", "-lc", "npx -y --package=moltbot@latest moltbot gateway --host 0.0.0.0 --port \"${PORT}\""]
+CMD ["bash", "-lc", "node openclaw.mjs gateway --allow-unconfigured --bind lan --port \"${PORT}\""]
